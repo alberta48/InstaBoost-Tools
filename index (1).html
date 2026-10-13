@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To‑Do List (localStorage)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <h1>To‑Do List</h1>
+
+    <form id="todo-form" aria-label="Add todo">
+      <input id="todo-input" type="text" placeholder="Add a new task..." aria-label="New task" autocomplete="off" />
+      <button id="add-btn" type="submit" aria-label="Add task">Add</button>
+    </form>
+
+    <section class="controls" aria-label="Controls">
+      <div class="filters" role="tablist" aria-label="Filter tasks">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="active" role="tab" aria-selected="false">Active</button>
+        <button class="filter-btn" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      </div>
+      <button id="clear-completed" class="muted">Clear completed</button>
+    </section>
+
+    <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+    <footer class="footer">
+      <span id="count">0 items left</span>
+      <small class="muted"> — Double-click a task to edit. Press Enter to save, Esc to cancel.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
